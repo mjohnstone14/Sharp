@@ -11,7 +11,7 @@ module.exports = {
   host: process.env.HOST || '0.0.0.0',
   // DOMAIN config should be set to the fully qualified application accessible
   // URL. For example: https://www.myapp.com (including port if required).
-  domain: 'https://agile-meadow-72160.herokuapp.com/',
+  domain: 'https://agile-meadow-72160.herokuapp.com',
 
   // Session Cookie settings
   sessionCookie: {
