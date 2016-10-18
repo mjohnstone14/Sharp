@@ -16,6 +16,8 @@
   },
   "scripts": {
     "update": "npm update && npm prune && bower install --allow-root && bower prune --allow-root",
+    "clean": "rm -rf node_modules/ public/lib/",
+    "reinstall": "npm cache clean && npm run clean && npm install",
     "start": "gulp",
     "start:prod": "gulp prod",
     "start:debug": "gulp debug",
