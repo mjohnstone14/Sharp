@@ -71,7 +71,8 @@ var validateEnvironmentVariable = function () {
 /** Validate config.domain is set
  */
 var validateDomainIsSet = function (config) {
-  if (!config.app.domain) {
+  console.log('current domain:' + config.domain);
+  if (!config.domain) {
     console.log(chalk.red('+ Important warning: config.domain is empty. It should be set to the fully qualified domain of the app.'));
   }
 };
