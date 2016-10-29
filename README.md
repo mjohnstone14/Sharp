@@ -18,10 +18,14 @@ Kayla Ramos
 Sierra Scott
 
 [Site link](https://agile-meadow-72160.herokuapp.com/)
+# Team Progress (Iteration 1)
 
-# Team progress
+* Edited calendar module client controller (modules/calendar/client/controllers/calendar.client.controller.js), edited addEvent() function in the file to take a boolean paramater isPrivate in order to determine whether or not the event to be added is private or public. Added a new attribute to the newEvent object called private, which holds the boolean value for privacy. Updated the className attribute in the newEvent object to hold the boolean value in order for the event DOM to determine privacy and allow for variation in display for CSS. (10/30/16)
 
-* Calendar module added on 10/24 by Kayla Ramos. So far just the bare bones module downloaded. 
+
+# Team progress (initial set up, 10/24)
+
+* Calendar module added on 10/24 by Kayla Ramos. So far just the bare bones module downloaded.
 
 MEAN.JS is a full-stack JavaScript open-source solution, which provides a solid starting point for [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/) based applications. The idea is to solve the common issues with connecting those frameworks, build a robust framework to support daily development needs, and help developers use better practices while working with popular JavaScript components.
 

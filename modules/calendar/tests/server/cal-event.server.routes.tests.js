@@ -228,6 +228,10 @@ describe('CalEvent CRUD tests', function () {
 
     });
 
+
+
+/*
+
     it('should  be able to get a single private calendar event if logged in', function (done) {
 
     });
