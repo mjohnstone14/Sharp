@@ -20,7 +20,10 @@ Sierra Scott
 [Site link](https://agile-meadow-72160.herokuapp.com/)
 # Team Progress (Iteration 1)
 
-* Edited calendar module client controller (modules/calendar/client/controllers/calendar.client.controller.js), edited addEvent() function in the file to take a boolean paramater isPrivate in order to determine whether or not the event to be added is private or public. Added a new attribute to the newEvent object called private, which holds the boolean value for privacy. Updated the className attribute in the newEvent object to hold the boolean value in order for the event DOM to determine privacy and allow for variation in display for CSS. (10/30/16)
+* Edited calendar module client controller (modules/calendar/client/controllers/calendar.client.controller.js), edited addEvent() function in the file to take a boolean paramater isPrivate in order to determine whether or not the event to be added is private or public. Added a new attribute to the newEvent object called private, which holds the boolean value for privacy. Updated the className attribute in the newEvent object to hold the boolean value in order for the event DOM to determine privacy and allow for variation in display for CSS. - Marwan (10/30/16)
+
+* Changed addEvent attribute to priv instead of private - Marwan (10/30)
+
 
 
 # Team progress (initial set up, 10/24)
