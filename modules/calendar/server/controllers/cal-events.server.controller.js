@@ -15,11 +15,11 @@ exports.create = function (req, res) {
   var calEvent = new CalEvent(req.body);
   calEvent.user = req.user;
 
-  if (calEvent.priv | calEvent.user._id === req.user._id) {
+  if (req.priv && (calEvent.user._id === req.user._id)) {
     calEvent.save(function (err) {
       res.json(calEvent);
     });
-  } else if (!calEvent.priv) {
+  } else if (!req.priv) {
     calEvent.save(function (err) {
       res.json(calEvent);
     });
