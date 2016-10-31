@@ -15,15 +15,13 @@ exports.create = function (req, res) {
   var calEvent = new CalEvent(req.body);
   calEvent.user = req.user;
 
-  if (calEvent.priv === false | calEvent.user._id === req.user._id) {
+  if (calEvent.priv | calEvent.user._id === req.user._id) {
     calEvent.save(function (err) {
-      if (err) {
-        return res.status(400).send({
-          message: errorHandler.getErrorMessage(err)
-        });
-      } else {
-        res.json(calEvent);
-      }
+      res.json(calEvent);
+    });
+  } else if (!calEvent.priv) {
+    calEvent.save(function (err) {
+      res.json(calEvent);
     });
   } else {
     return res.status(403).send({
@@ -86,7 +84,7 @@ exports.delete = function (req, res) {
  * List of Articles
  */
 exports.list = function (req, res) {
-  if(req.user){
+  if (req.user) {
     CalEvent.find({ $or: [{ priv: false }, { user: req.user._id }] }).sort('-created').populate('user', 'displayName').exec(function (err, calEvents) {
       if (err) {
         return res.status(400).send({
