@@ -127,6 +127,7 @@ Here are the dependency injections for this controller. CalendarService is the s
         priv: isPrivate  // added by Marwan 10/30, model schema should use private as a boolean param to reflect
       });
 
+      console.log(newEvent.priv);
       newEvent.$save(function(data) {
         newEvent._id = data._id;
         vm.calEvents.push(newEvent);
