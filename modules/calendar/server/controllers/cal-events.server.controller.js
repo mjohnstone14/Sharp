@@ -15,7 +15,6 @@ exports.create = function (req, res) {
   var calEvent = new CalEvent(req.body);
   calEvent.user = req.user;
 
-  if(calEvent.public === true | calEvent.user === req.user._id){
   calEvent.save(function (err) {
     if (err) {
       return res.status(400).send({
@@ -24,11 +23,6 @@ exports.create = function (req, res) {
     } else {
       res.json(calEvent);
     }
-  }}
-  else{
-    return res.status(403).send({
-      message: 'Must be logged in to save a private event'
-    });
   });
 };
 
@@ -37,7 +31,7 @@ exports.create = function (req, res) {
  */
 exports.read = function (req, res) {
   // convert mongoose document to JSON
-  var calEvent = req.calEvent ? req.calEvent.toJSON() : {};
+  var calEvent = req.calEvent ? req.calEvent.toJSON() : { };
 
   // Add a custom field to the event, for determining if the current User is the "owner".
   // NOTE: This field is NOT persisted to the database, since it doesn't exist in the Article model.
@@ -86,7 +80,7 @@ exports.delete = function (req, res) {
  * List of Articles
  */
 exports.list = function (req, res) {
-  CalEvent.find({$or: [ { public: true }, { user: req.user._id} ] }).sort('-created').populate('user', 'displayName').exec(function (err, calEvents) {
+  CalEvent.find().sort('-created').populate('user', 'displayName').exec(function (err, calEvents) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)

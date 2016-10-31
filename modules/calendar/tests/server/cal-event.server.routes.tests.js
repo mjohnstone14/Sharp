@@ -103,8 +103,6 @@ describe('CalEvent CRUD tests', function () {
       });
   });
 
-
-
   it('should be able to save a public calendar event if not logged in', function (done) {
     calEvent.public = true;
     agent.post('/api/calendar')
@@ -212,9 +210,6 @@ describe('CalEvent CRUD tests', function () {
     it('should not be able to get a list of private calendar events if not logged in', function (done) {
 
     });
-
-
-
 /*
 /*
 
