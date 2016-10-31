@@ -33,12 +33,13 @@ var CalEventSchema = new Schema({
   allDay: Boolean,
   start: Date,
   end: Date,
-  stick: { type: Boolean, default: true, priv: Boolean}, // connected to the controller for a private event/Sierra 10/29
+  stick: { type: Boolean, default: true}, // connected to the controller for a private event/Sierra 10/29
   user: {
     type: Schema.ObjectId,
     ref: 'User'
   },
-  className: [String]
+  className: [String],
+  priv: Boolean
 });
 
 mongoose.model('CalEvent', CalEventSchema);
