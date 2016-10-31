@@ -15,15 +15,21 @@ exports.create = function (req, res) {
   var calEvent = new CalEvent(req.body);
   calEvent.user = req.user;
 
-  calEvent.save(function (err) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      res.json(calEvent);
-    }
-  });
+  if(calEvent.priv === false | calEvent.user === req.user._id){
+    calEvent.save(function (err) {
+      if (err) {
+        return res.status(400).send({
+          message: errorHandler.getErrorMessage(err)
+        });
+      } else {
+        res.json(calEvent);
+      }
+    });
+  } else {
+    return res.status(403).send({
+      message: 'Must be logged in to save a private event'
+    });
+  };
 };
 
 /**
