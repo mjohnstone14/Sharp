@@ -15,7 +15,7 @@ exports.create = function (req, res) {
   var calEvent = new CalEvent(req.body);
   calEvent.user = req.user;
 
-  if (calEvent.priv === false | calEvent.user === req.user._id) {
+  if (calEvent.priv === false | calEvent.user._id === req.user._id) {  //added calEvent.user._id because it will otherwise always eqaute to false
     calEvent.save(function (err) {
       if (err) {
         return res.status(400).send({

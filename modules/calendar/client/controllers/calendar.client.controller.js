@@ -122,12 +122,13 @@ Here are the dependency injections for this controller. CalendarService is the s
         title: 'Coffee Break',
         start: vm.selectedDate.local(),
         end: vm.selectedDate.local(),
-        className: ['coffeeBreak', 'isPrivate'], // added by Marwan 10/30, boolean param to className attribute in order for the object to be associated with its appropriate event in the DOM.
+        className: ['coffeeBreak'], // added by Marwan 10/30, boolean param to className attribute in order for the object to be associated with its appropriate event in the DOM.
         stick: true,
-        priv: isPrivate  // added by Marwan 10/30, model schema should use private as a boolean param to reflect
+        priv: isPrivate,  // added by Marwan 10/30, model schema should use private as a boolean param to reflect
+        user: vm.authentication.user
       });
 
-      console.log(newEvent.priv);
+    //  console.log(newEvent.priv);
       newEvent.$save(function(data) {
         newEvent._id = data._id;
         vm.calEvents.push(newEvent);
