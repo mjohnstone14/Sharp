@@ -223,13 +223,15 @@ describe('CalEvent CRUD tests', function () {
     it('should be able to get a list of private calendar events if logged in', function (done) {
 
     });
-
+*/
+/*
     it('should not be able to get a list of private calendar events if not logged in', function (done) {
 
     });
 
 
 
+/*
 /*
 
     it('should  be able to get a single private calendar event if logged in', function (done) {
