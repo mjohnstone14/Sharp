@@ -1,7 +1,12 @@
 td.select-highlight {
-  background-color: #e6ffff
+  background-color: #999895
 }
 
 input.eventtext {
   width: 140px
+}
+
+.isPrivate{
+  background-color: #ff3838;
+  border: #b21818;
 }

@@ -11,10 +11,12 @@ module.exports = {
         'public/lib/bootstrap/dist/css/bootstrap.min.css',
         'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
         'public/lib/ng-img-crop/compile/minified/ng-img-crop.css',
+        'public/lib/fullcalendar/dist/fullcalendar.min.css',
         // endbower
       ],
       js: [
         // bower:js
+        'public/lib/jquery/dist/jquery.min.js',
         'public/lib/angular/angular.min.js',
         'public/lib/angular-animate/angular-animate.min.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
@@ -26,6 +28,9 @@ module.exports = {
         'public/lib/ng-file-upload/ng-file-upload.min.js',
         'public/lib/ng-img-crop/compile/minified/ng-img-crop.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
+        'public/lib/moment/moment.js',
+        'public/lib/fullcalendar/dist/fullcalendar.min.js',
+        'public/lib/angular-ui-calendar/src/calendar.js',
         // endbower
       ]
     },

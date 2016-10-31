@@ -33,7 +33,7 @@ var CalEventSchema = new Schema({
   allDay: Boolean,
   start: Date,
   end: Date,
-  stick: { type: Boolean, default: true },
+  stick: { type: Boolean, default: true, priv: Boolean}, // connected to the controller for a private event/Sierra 10/29
   user: {
     type: Schema.ObjectId,
     ref: 'User'
