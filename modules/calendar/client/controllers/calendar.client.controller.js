@@ -118,14 +118,23 @@ Here are the dependency injections for this controller. CalendarService is the s
       how this is created, which you'll find in /client/services/calendar.client.service.js
       */
 
+      // Created function to determine the color of the event based on boolean value - Marwan & Kayla (10/31)
+      var makeClassName = function() {
+        if (isPrivate) {
+          return ['coffeeBreak', 'isPrivate'];
+        } else {
+          return ['coffeeBreak'];
+        }
+      };
+
       var newEvent = new CalendarService({
         title: 'Coffee Break',
         start: vm.selectedDate.local(),
         end: vm.selectedDate.local(),
-        className: ['coffeeBreak'], // added by Marwan 10/30, boolean param to className attribute in order for the object to be associated with its appropriate event in the DOM.
+        className: makeClassName(), // added by Marwan 10/30, boolean param to className attribute in order for the object to be associated with its appropriate event in the DOM.
         stick: true,
         priv: isPrivate,  // added by Marwan 10/30, model schema should use private as a boolean param to reflect
-        user: vm.authentication.user 
+        user: vm.authentication.user
       });
 
     //  console.log(newEvent.priv);

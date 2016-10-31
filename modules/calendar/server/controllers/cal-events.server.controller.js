@@ -82,7 +82,11 @@ exports.delete = function (req, res) {
 
 /**
  * List of Articles
+ *
+ * Changed priv to false for each .find function to only display public events. - Marwan & Kayla (10/31)
+ *
  */
+
 exports.list = function (req, res) {
   if (req.user) {
     CalEvent.find({ $or: [{ priv: false }, { user: req.user._id }] }).sort('-created').populate('user', 'displayName').exec(function (err, calEvents) {
@@ -95,7 +99,7 @@ exports.list = function (req, res) {
       }
     });
   } else {
-    CalEvent.find({ priv: true }).sort('-created').populate('user', 'displayName').exec(function (err, calEvents) {
+    CalEvent.find({ priv: false }).sort('-created').populate('user', 'displayName').exec(function (err, calEvents) {
       if (err) {
         return res.status(400).send({
           message: errorHandler.getErrorMessage(err)
