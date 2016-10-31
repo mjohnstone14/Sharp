@@ -95,7 +95,7 @@ exports.list = function (req, res) {
       }
     });
   } else {
-    CalEvent.find({ priv: true }).sort('-created').populate('user', 'displayName').exec(function (err, calEvents) {
+    CalEvent.find({ priv: false }).sort('-created').populate('user', 'displayName').exec(function (err, calEvents) {
       if (err) {
         return res.status(400).send({
           message: errorHandler.getErrorMessage(err)
