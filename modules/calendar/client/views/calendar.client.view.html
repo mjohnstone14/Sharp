@@ -12,7 +12,7 @@
                 <button type="button" class="btn btn-primary" ng-click="vm.addEvent(false)"> <!--false for not private event-->
                   Add Event
                 </button>
-                <button type="button" class="btn btn-primary" ng-click="vm.addEvent(true)"  ng-show="vm.authentication.user"> <!--Added private button and only shows if user logged in-->
+                <button type="button" class="btn btn-primary" ng-click="vm.addEvent(true)"  ng-if="vm.authentication.user"> <!--Added private button and only shows if user logged in-->
                   Add Private Event
                 </button>
             </div>
