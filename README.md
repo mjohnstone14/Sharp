@@ -24,6 +24,9 @@ Sierra Scott
 
 * Changed addEvent attribute to priv instead of private - Marwan (10/30)
 
+* Modified listing functionality in the server controller (modules/calendar/server/controllers/cal-events.server.controller.js) so that it queries the database. - Elias (10/31/16)
+
+* Modified the creation of events in the server controller so that private events have a user object attached to them (if they don't, a 403 error will be returned). - Elias (10/31/16)
 
 
 # Team progress (initial set up, 10/24)
