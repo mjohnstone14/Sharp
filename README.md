@@ -30,6 +30,9 @@ Sierra Scott
 
 * Modified the creation of events in the server controller so that private events have a user object attached to them (if they don't, a 403 error will be returned). - Elias (10/31/16)
 
+* Edited the view to show a private event button when logged in and provided the boolean for isPrivate that is used in the client controller. - Kayla (10/30)
+
+* Created server tests for 'should  be able to get a single private calendar event if logged in' and 'should be able to get a list of private calendar events if logged in' -Kayla and Marwan (10/31)
 
 # Team progress (initial set up, 10/24)
 
