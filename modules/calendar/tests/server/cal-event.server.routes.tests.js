@@ -201,21 +201,80 @@ describe('CalEvent CRUD tests', function () {
 
 
 // More tests for private/public event handling
-/*
+// Used the sign in portion from the 'should be able to save a calendar event if logged in' test and combined it with the body of 'should be able to get a list of calendar events if not signed in' test
     it('should be able to get a list of private calendar events if logged in', function (done) {
+      agent.post('/api/auth/signin')
+        .send(credentials)
+        .expect(200)
+        .end(function (signinErr, signinRes) {
+          // Handle signin error
+          if (signinErr) {
+            return done(signinErr);
+          }
+
+          // Get the userId
+          var userId = user.id;
+
+          // Create new calendar event model instance
+          var calEventObj = new CalEvent(calEvent);
+
+          // Save the calEvent
+          calEventObj.save(function () {
+            // Request calEvents
+            request(app).get('/api/calendar')
+              .end(function (req, res) {
+                // Set assertion
+                res.body.should.be.instanceof(Array).and.have.lengthOf(1);
+
+                // Call the assertion callback
+            done();
+          });
+
+      });
 
     });
-*/
+});
 /*
     it('should not be able to get a list of private calendar events if not logged in', function (done) {
 
     });
-/*
-/*
+*/
 
+  // Used the sign in portion from the 'should be able to save a calendar event if logged in' test and combined it with the body of 'should be able to get a single calendar event if not signed in' test
     it('should  be able to get a single private calendar event if logged in', function (done) {
 
+      agent.post('/api/auth/signin')
+        .send(credentials)
+        .expect(200)
+        .end(function (signinErr, signinRes) {
+          // Handle signin error
+          if (signinErr) {
+            return done(signinErr);
+          }
+
+          // Get the userId
+          var userId = user.id;
+
+
+        // Create new calendar event model instance
+        var calEventObj = new CalEvent(calEvent);
+
+        // Save the calendar event
+        calEventObj.save(function () {
+          request(app).get('/api/calendar/' + calEventObj._id)
+            .end(function (req, res) {
+              // Set assertion
+              res.body.should.be.instanceof(Object).and.have.property('title', calEvent.title);
+
+              // Call the assertion callback
+              done();
+          });
+      });
     });
+  });
+
+
+/*
 
     it('should not be able to get a single private calendar event if not logged in', function (done) {
 
