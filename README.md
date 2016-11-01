@@ -1,13 +1,4 @@
 
-
-[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
-
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/meanjs/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/meanjs/mean.svg?branch=master)](https://travis-ci.org/meanjs/mean)
-[![Dependencies Status](https://david-dm.org/meanjs/mean.svg)](https://david-dm.org/meanjs/mean)
-[![Coverage Status](https://coveralls.io/repos/meanjs/mean/badge.svg?branch=master&service=github)](https://coveralls.io/github/meanjs/mean?branch=master)
-
-
 # Team Sharp
 Elias McSeveney
 
@@ -19,6 +10,7 @@ Sierra Scott
 
 [Site link](https://agile-meadow-72160.herokuapp.com/)
 # Team Progress (Iteration 1)
+* Only problem with calendar module is when signing in on calendar page it redirects back to an empty calendar. Once refreshed, all correct events and other info appears. 
 
 * Edited syntax errors. Added makeClassName function to calendar.client.controller, the function determines whether or not the event is private or public, and changes the classname appropriately. Edited calEvent.find() lines in server controller that populate the calendar with a list, set both priv attributes to false in order to pull all public events. - Marwan & Kayla (10/31)
 
