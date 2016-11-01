@@ -104,7 +104,7 @@ describe('CalEvent CRUD tests', function () {
   });
 
   it('should be able to save a public calendar event if not logged in', function (done) {
-    calEvent.public = true;
+    calEvent.priv = false; // edited by Marwan to match mongoose model, changed .public to .priv (10/31)
     agent.post('/api/calendar')
       .send(calEvent)
       .expect(200)
@@ -118,7 +118,7 @@ describe('CalEvent CRUD tests', function () {
   });
 
   it('should not be able to save a private calendar event if not logged in', function (done) {
-    calEvent.public = false;
+    calEvent.priv = true; // edited by Marwan to match mongoose model. (10/31)
     agent.post('/api/calendar')
       .send(calEvent)
       .expect(403)
@@ -232,8 +232,10 @@ describe('CalEvent CRUD tests', function () {
 
       });
 
+
     });
 });
+
 /*
     it('should not be able to get a list of private calendar events if not logged in', function (done) {
 
