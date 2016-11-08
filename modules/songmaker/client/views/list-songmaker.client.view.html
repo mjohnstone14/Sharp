@@ -1,0 +1,18 @@
+<section>
+  <div class="page-header">
+    <h1>Songmaker</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="songmaker in vm.songmaker" ui-sref="songmaker.view({ songId: song._id })" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="song.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="song.user" ng-bind="song.user.displayName"></span>
+        <span ng-if="!song.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="song.title"></h4>
+      <p class="list-group-item-text" ng-bind="songmaker.content"></p>
+    </a>
+  </div>
+</section>
