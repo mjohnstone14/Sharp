@@ -60,7 +60,7 @@
       describe('Create Route', function () {
         var createstate,
           SongmakerAdminController,
-          mockSong
+          mockSong;
 
         beforeEach(inject(function ($controller, $state, $templateCache) {
           createstate = $state.get('admin.songmaker.create');

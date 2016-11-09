@@ -368,7 +368,7 @@ describe('Song CRUD tests', function () {
               }
 
               // Set assertions on new song
-              (songSaveRes.body.title).should.equal(son.title);
+              (songSaveRes.body.title).should.equal(song.title);
               should.exist(songSaveRes.body.user);
               should.equal(songSaveRes.body.user._id, userId);
 
