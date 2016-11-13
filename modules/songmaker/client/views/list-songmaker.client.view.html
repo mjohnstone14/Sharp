@@ -1,79 +1,35 @@
 <section>
   <div class="page-header">
-    <h1>Sharp</h1>
+    <h1>shArp</h1>
   </div>
-  <div class="well">
-      <div class="row">
-        <div class="list-group">
-          <a ng-repeat="songmaker in vm.songmaker" ui-sref="songmaker.view({ songId: song._id })" class="list-group-item">
-            <small class="list-group-item-text">
-              Posted on
-              <span ng-bind="song.created | date:'mediumDate'"></span>
-              by
-              <span ng-if="song.user" ng-bind="song.user.displayName"></span>
-              <span ng-if="!song.user">Deleted User</span>
-            </small>
-            <h4 class="list-group-item-heading" ng-bind="song.title"></h4>
-            <p class="list-group-item-text" ng-bind="songmaker.content"></p>
-          </a>
-        </div>
+  <p>choose a key and a progression</p>
 
         <!--Dropped down button format-->
           <!--Everything that is horizontal-->
-        <select name='takeation'>
-          <option class='head'>Select Action</option>
-          <option value='Action 1'>Action 1</option>
-          <option value='Action 2'>Action 2</option>
-          <option value='Action 3'>Action 3</option>
-        </select>
-
-        <select name='takeation'>
-          <option class='head'>Select Action</option>
-          <option value='Action 1'>Action 1</option>
-          <option value='Action 2'>Action 2</option>
-          <option value='Action 3'>Action 3</option>
-        </select>
-
-        <select name='takeation'>
-          <option class='head'>Select Action</option>
-          <option value='Action 1'>Action 1</option>
-          <option value='Action 2'>Action 2</option>
-          <option value='Action 3'>Action 3</option>
-        </select>
-
-        <select name='takeation'>
-          <option class='head'>Select Action</option>
-          <option value='Action 1'>Action 1</option>
-          <option value='Action 2'>Action 2</option>
-          <option value='Action 3'>Action 3</option>
-        </select>
-
+          <div class="dropdown">
+           <button class="dropbtn">keys</button>
+             <div class="dropdown-content">
+               <a href="#">C</a>
+               <a href="#">D</a>
+               <a href="#">E</a>
+               <a href="#">F</a>
+               <a href="#">G</a>
+               <a href="#">A</a>
+               <a href="#">B</a>
+             </div>
+          </div>
+          <div class="dropdown">
+           <button class="dropbtn">progressions</button>
+             <div class="dropdown-content">
+               <a href="#">pop</a>
+               <a href="#">hip hop</a>
+               <a href="#">country</a>
+               <a href="#">rock</a>
+               <a href="#">alternative</a>
+             </div>
+          </div>
         <!--Regular buttons-->
-      <button type="button" class="btn btn-primary"> <!--Need to add ng-click=functionFromController()-->
-        Button
-      </button>
-
-
-      <!--Everything that is vertical-->
-      <div>
-        <select name='takeation'>
-          <option class='head'>Select Action</option>
-          <option value='Action 1'>Action 1</option>
-          <option value='Action 2'>Action 2</option>
-          <option value='Action 3'>Action 3</option>
-        </select>
-      </div>
-
-        <!--Regular buttons-->
-      <button type="button" class="btn btn-primary"> <!--Need to add ng-click=functionFromController()-->
-        Button
-      </button>
-
-
-
-
-
-  </div>
-  </div>
+        <button class="button">create</button>
+        <button class="button">save</button>
 
 </section>
