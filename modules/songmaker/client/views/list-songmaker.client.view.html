@@ -6,30 +6,32 @@
 
         <!--Dropped down button format-->
           <!--Everything that is horizontal-->
-          <div class="dropdown">
+          <div ng-app="songmaker">
+          <div class="dropdown", ng-controller="DropDownKeyCtrl as vm">
            <button class="dropbtn">keys</button>
-             <div class="dropdown-content">
-               <a href="#">C</a>
-               <a href="#">D</a>
-               <a href="#">E</a>
-               <a href="#">F</a>
-               <a href="#">G</a>
-               <a href="#">A</a>
-               <a href="#">B</a>
-             </div>
+           <div class="dropdown-content">
+           </div>
+             <select ng-model="keySelect" ng-options="x for x in vm.keys">
+             </select>
+             <h5>Your selected key: {{ keySelect }}</h5>
+
           </div>
-          <div class="dropdown">
+          <div class="dropdown", ng-controller="DropdownProgressionsCtrl as vm">
            <button class="dropbtn">progressions</button>
              <div class="dropdown-content">
-               <a href="#">pop</a>
-               <a href="#">hip hop</a>
-               <a href="#">country</a>
-               <a href="#">rock</a>
-               <a href="#">alternative</a>
-             </div>
+              </div>
+               <select ng-model="progressionSelect" ng-options="x.name for x in vm.progressions">
+               </select>
+
+               <h4>Your selected progression is {{ progressionSelect.name }} which is {{ progressionSelect.progression }}</h4>
           </div>
+
+
         <!--Regular buttons-->
         <button class="button">create</button>
         <button class="button">save</button>
+
+
+      </div>
 
 </section>
