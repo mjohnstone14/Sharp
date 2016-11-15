@@ -4,8 +4,11 @@ Sierra
 * made a logo
 * worked on main page
 
+Elias
+* Worked with Marwan to create controllers (all changes to which were pushed under his Github account)
+* Added screenshot to readme
 
-
+![](/README images/Screen Shot 2016-11-14 at 8.01.05 PM.png)
 # Team Sharp
 Elias McSeveney
 
