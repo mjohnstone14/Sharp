@@ -1,3 +1,10 @@
+Sierra
+* created the css file for the buttons and layout of the page
+* edited the view html file
+* made a logo
+* worked on main page
+
+
 
 # Team Sharp
 Elias McSeveney
@@ -10,7 +17,7 @@ Sierra Scott
 
 [Site link](https://agile-meadow-72160.herokuapp.com/)
 # Team Progress (Iteration 1)
-* Only problem with calendar module is when signing in on calendar page it redirects back to an empty calendar. Once refreshed, all correct events and other info appears. 
+* Only problem with calendar module is when signing in on calendar page it redirects back to an empty calendar. Once refreshed, all correct events and other info appears.
 
 * Edited syntax errors. Added makeClassName function to calendar.client.controller, the function determines whether or not the event is private or public, and changes the classname appropriately. Edited calEvent.find() lines in server controller that populate the calendar with a list, set both priv attributes to false in order to pull all public events. - Marwan & Kayla (10/31)
 
