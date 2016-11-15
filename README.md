@@ -8,6 +8,9 @@ Elias
 * Worked with Marwan to create controllers (all changes to which were pushed under his Github account)
 * Added screenshot to readme
 
+Kayla Ramos
+* Added a variety of buttons to start working on the layout of main page and basic functionality 
+
 ![](/README images/Screen Shot 2016-11-14 at 8.01.05 PM.png)
 # Team Sharp
 Elias McSeveney
