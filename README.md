@@ -1,3 +1,8 @@
+# Team Sharp
+Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
+[Site link](https://agile-meadow-72160.herokuapp.com/)
+
+# Team Progress (Iteration 2)
 Sierra
 * created the css file for the buttons and layout of the page
 * edited the view html file
@@ -9,19 +14,13 @@ Elias
 * Added screenshot to readme
 
 Kayla Ramos
-* Added a variety of buttons to start working on the layout of main page and basic functionality 
-
-![](/README images/Screen Shot 2016-11-14 at 8.01.05 PM.png)
-# Team Sharp
-Elias McSeveney
+* Added a variety of buttons to start working on the layout of main page and basic functionality
 
 Marwan Johnstone
+* Worked with Elias to create controllers for key and progression dropdown buttons. The controllers both use vm instead of binding to $scope. Also edited the html view to incorporate the module and its controllers, added some code to output the selected key and progression to test functionality of controllers. (11/14)
 
-Kayla Ramos
+![](/README images/Screen Shot 2016-11-14 at 8.01.05 PM.png)
 
-Sierra Scott
-
-[Site link](https://agile-meadow-72160.herokuapp.com/)
 # Team Progress (Iteration 1)
 * Only problem with calendar module is when signing in on calendar page it redirects back to an empty calendar. Once refreshed, all correct events and other info appears.
 
