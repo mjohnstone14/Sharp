@@ -3,6 +3,12 @@ Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
 
 
 [Site link](https://agile-meadow-72160.herokuapp.com/)
+# Team Progress (Iteration 3)
+
+Marwan
+
+* Edited main view html and used Bootstrap to create two drop down buttons which pull data from appropriate controllers. I did this for both the key and progression dropdowns. I also edited the controllers to save the user's click into a variable "current" for the vm object. This will be used in order to create songs in another controller later on. (11/17/16) 
+
 
 # Team Progress (Iteration 2)
 Sierra

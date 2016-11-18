@@ -19,12 +19,19 @@
       { name: 'Rocky', progression: 'I-vi-IV-V', numprog: [1, 6, 4, 5], minors: [6] }
     ];
 
+    vm.setCurrent= function(val) {
+         vm.current = val;
+    }
   }
 
   function DropDownKeyCtrl() {
     var vm = this;
     vm.title = 'Keys';
     vm.keys = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
+    vm.setCurrent= function(val) {
+         vm.current = val;
+    }
 
   }
 

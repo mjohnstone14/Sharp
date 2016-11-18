@@ -6,25 +6,49 @@
 
         <!--Dropped down button format-->
           <!--Everything that is horizontal-->
-          <div ng-app="songmaker">
-          <div class="dropdown", ng-controller="DropDownKeyCtrl as vm">
-           <button class="dropbtn">keys</button>
-           <div class="dropdown-content">
-           </div>
-             <select ng-model="keySelect" ng-options="x for x in vm.keys">
-             </select>
-             <h5>Your selected key: {{ keySelect }}</h5>
+        <div ng-app=songmaker>
+          <!--Drop downs-->
 
-          </div>
-          <div class="dropdown", ng-controller="DropdownProgressionsCtrl as vm">
-           <button class="dropbtn">progressions</button>
-             <div class="dropdown-content">
-              </div>
-               <select ng-model="progressionSelect" ng-options="x.name for x in vm.progressions">
-               </select>
+          <!--key dropdown-->
+          <div class="container">
 
-               <h4>Your selected progression is {{ progressionSelect.name }} which is {{ progressionSelect.progression }}</h4>
-          </div>
+    			<div class="dropdown", ng-controller="DropDownKeyCtrl as vm">
+    				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+    					Keys <span class="caret"></span>
+    				</button>
+
+    				<ul class="dropdown-menu">
+              <li class="dropdown-header">Pick a key</li>
+              <li ng-repeat="x in vm.keys">
+                <a ng-click="vm.setCurrent(x)">
+                  {{x}}
+                </a>
+              </li>
+    				</ul>
+            <p>Key chosen: {{ vm.current }}</p>
+
+    			</div>
+
+          <!--progression dropdown-->
+
+
+    			<div class="dropdown", ng-controller="DropdownProgressionsCtrl as vm">
+    				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+    					Progressions <span class="caret"></span>
+    				</button>
+
+    				<ul class="dropdown-menu">
+              <li class="dropdown-header">Pick a progression</li>
+              <li ng-repeat="x in vm.progressions">
+                <a ng-click="vm.setCurrent(x.numprog)">
+                  {{ x.name }}
+                </a>
+              </li>
+    				</ul>
+
+            <p>Progression chosen(for testing): {{ vm.current }}</p>
+
+    			</div>
 
 
         <!--Regular buttons-->
@@ -33,5 +57,9 @@
 
 
       </div>
+
+      <script src="lib/jquery/dist/jquery.min.js"></script>
+      <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
 
 </section>
