@@ -1,8 +1,7 @@
 <section>
   <div class="page-header">
-    <h1>shArp</h1>
+    <h1>choose a key and a progression</h1>
   </div>
-  <p>choose a key and a progression</p>
 
         <!--Dropped down button format-->
           <!--Everything that is horizontal-->
@@ -12,44 +11,38 @@
           <!--key dropdown-->
           <div class="container">
 
-    			<div class="dropdown", ng-controller="DropDownKeyCtrl as vm">
-    				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-    					Keys <span class="caret"></span>
+    			<div class="dropdown", type="button", ng-controller="DropDownKeyCtrl as vm">
+    				<button class="dropbtn" data-toggle="dropdown">
+    					keys <span class="caret"></span>
     				</button>
 
     				<ul class="dropdown-menu">
-              <li class="dropdown-header">Pick a key</li>
               <li ng-repeat="x in vm.keys">
                 <a ng-click="vm.setCurrent(x)">
                   {{x}}
                 </a>
               </li>
-    				</ul>
-            <p>Key chosen: {{ vm.current }}</p>
-
+    				</ul><br>
+            <br>
+              <p>Key chosen: {{ vm.current }}</p>
     			</div>
 
           <!--progression dropdown-->
-
-
-    			<div class="dropdown", ng-controller="DropdownProgressionsCtrl as vm">
-    				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-    					Progressions <span class="caret"></span>
+    			<div class="dropdown", type="button", ng-controller="DropdownProgressionsCtrl as vm">
+    				<button class="dropbtn" data-toggle="dropdown">
+    					progressions <span class="caret"></span>
     				</button>
 
     				<ul class="dropdown-menu">
-              <li class="dropdown-header">Pick a progression</li>
               <li ng-repeat="x in vm.progressions">
                 <a ng-click="vm.setCurrent(x.numprog)">
                   {{ x.name }}
                 </a>
               </li>
-    				</ul>
-
-            <p>Progression chosen(for testing): {{ vm.current }}</p>
-
+    				</ul><br>
+            <br>
+              <p>Progression chosen (for testing): {{ vm.current }}</p>
     			</div>
-
 
         <!--Regular buttons-->
         <button class="button">create</button>
@@ -60,6 +53,5 @@
 
       <script src="lib/jquery/dist/jquery.min.js"></script>
       <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
-
 
 </section>
