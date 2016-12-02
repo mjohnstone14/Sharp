@@ -34,6 +34,10 @@
         data: {
           pageTitle: 'Song {{ songResolve.title }}'
         }
+      })
+      .state('about', {
+        url: '/about',
+        template: '<ui-view/>'
       });
   }
 

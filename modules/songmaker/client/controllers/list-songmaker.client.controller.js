@@ -40,5 +40,19 @@
     vm.songmaker = SongmakerService.query();
   }
 
+/*
+  function CreateButtonController(progression, key) {
+    var vm = this;
+    vm.scale = ['A','B','C','D','E','F','G'];
+
+    if(progression.length === 0) // then do random progression
+    if(key.length === 0) //do random key
+    if(key === 'A') {
+      for(int i = 0; i < progression.length; i++) {
+        progression[i] = vm.scale[progression[i]]; //the number in the progression is replaced with a letter
+      }
+    }
+
+  } */
 
 }());

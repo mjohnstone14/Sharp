@@ -26,7 +26,24 @@
             </li>
           </ul><br>
           <br>
-            <p>Key chosen: {{ vm.current }}</p>
+
+
+            <!--Create button that collapses-->
+            <p>
+              <button class="btn btn-primary" data-toggle="collapse" href="#displays" aria-expanded="false" aria-controls="displays">
+                Create
+              </button>
+            </p>
+            <div class="collapse" id="displays">
+              <div class="card card-block">
+                <p>Progression chosen is *Not available yet*</p>
+                <p>Key chosen: {{ vm.current }}</p>
+              </div>
+            </div>
+
+
+
+
           </div> <!--closes dropdown-->
 
         <!--progression dropdown-->
@@ -56,23 +73,6 @@
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
       </div><!--Closes songmaker-->
-
-      <!--Create button that collapses-->
-      <p>
-        <button class="btn btn-primary" data-toggle="collapse" href="#displays" aria-expanded="false" aria-controls="displays">
-          Create
-        </button>
-      </p>
-      <div class="collapse" id="displays">
-        <div class="card card-block">
-          <p>Progression chosen is *Not available yet*</p>
-        </div>
-      </div>
-
-
-
-
-
 
 
 
