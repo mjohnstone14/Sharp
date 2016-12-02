@@ -66,3 +66,19 @@
 .dropdown:hover .dropbtn {
     background-color: #227be8;
 }
+
+/* Next three deal with the layout of the sidebar*/
+.wrapper{
+    margin-right: 300px;
+}
+
+.content{
+    width: 100%;
+    float: left;
+}
+
+.sidebar{
+    float: right;
+    width: 300px;
+    margin-right: -300px;
+}
