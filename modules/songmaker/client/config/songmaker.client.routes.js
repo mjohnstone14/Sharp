@@ -38,6 +38,10 @@
       .state('about', {
         url: '/about',
         template: '<ui-view/>'
+      })
+      .state('how-to', {
+        url: '/how-to',
+        template: '<ui-view/>'
       });
   }
 
