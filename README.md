@@ -24,7 +24,7 @@ Marwan
 
 * Edited main view html and used Bootstrap to create two drop down buttons which pull data from appropriate controllers. I did this for both the key and progression dropdowns. I also edited the controllers to save the user's click into a variable "current" for the vm object. This will be used in order to create songs in another controller later on. (11/17/16)
 
-![](/README images/Screen Shot 2016-12-02 at 11.15.59 PM.png)
+![](/README images/Screen Shot 2016-12-02 at 11.24.49 PM.png)
 
 
 # Team Progress (Iteration 2)
