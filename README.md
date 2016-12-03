@@ -4,6 +4,11 @@ Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
 
 [Site link](https://agile-meadow-72160.herokuapp.com/)
 # Team Progress (Iteration 3)
+Elias
+* Consolidated the dropdown controllers into a single one in order to
+allow calculation of the appropriate progression for the user.
+* The create button will now show the selected chord progression in the selected key.
+
 Sierra
 * fixed the buttons and layout
 * changed colors and the sidebar
