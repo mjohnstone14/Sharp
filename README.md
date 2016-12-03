@@ -5,7 +5,10 @@ Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
 [Site link](https://agile-meadow-72160.herokuapp.com/)
 # Team Progress (Iteration 3)
 Kayla 
-* Added a sidebar, collapsible create button, and buttons on the top bar for the 'How To' and 'About' pages. 
+* Added a sidebar, collapsible create button, and buttons on the top bar for the 'How To' and 'About' pages.
+* Fixed small spacing and ordering errors
+* 'About' and 'How-To' pages have correlating html files now which will be polished later
+* Deleted Calendar and Articles modules
 
 Marwan
 
