@@ -37,11 +37,11 @@
       })
       .state('about', {
         url: '/about',
-        template: '<ui-view/>'
+        templateUrl: 'modules/songmaker/client/views/about.client.view.html'
       })
       .state('how-to', {
         url: '/how-to',
-        template: '<ui-view/>'
+        templateUrl: 'modules/songmaker/client/views/how-to.client.view.html'
       });
   }
 

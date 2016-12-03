@@ -27,7 +27,6 @@
       roles: ['*']
     });
 
-
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'songmaker', {
       title: 'List Songmaker',
