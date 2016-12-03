@@ -75,10 +75,11 @@
 }
 
 .sidebar{
-    background-color: lightgray;
-    border-radius: 5px;
-    float: right;
-    margin-right: -50px;
-    padding: 10px;
-    width: 300px; 
+  float: right;
+  width: 350px;
+  margin-right: -50px;
+  padding: 6px;
+  background-color: lightgray;
+  border-radius: 5px;
+  height: 400px;
 }
