@@ -1,6 +1,4 @@
 /* Dropdown Button */
-
-
 .button {
   background-color: #d6d6d6;
   border: none;
@@ -8,7 +6,6 @@
   color: #000000;
   cursor: pointer;
   font-size: 16px;
-  outline: none;
   padding: 12px;
   text-align: center;
 }
@@ -73,12 +70,16 @@
 }
 
 .content{
-    width: 100%;
     float: left;
+    width: 100%;
 }
 
 .sidebar{
-    float: right;
-    width: 300px;
-    margin-right: -300px;
+  float: right;
+  width: 350px;
+  margin-right: -50px;
+  padding: 6px;
+  background-color: lightgray;
+  border-radius: 5px;
+  height: 400px;
 }

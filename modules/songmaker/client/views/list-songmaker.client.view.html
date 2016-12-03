@@ -1,7 +1,7 @@
 <section>
 
-  <div class="container">
-    <h1>choose a chord and a progression</h1>
+  <div class="container", ng-controller="DropdownProgressionsCtrl as vm">
+    <h1>choose a key and a progression</h1>
 
 
     <div class="wrapper">
@@ -16,32 +16,52 @@
         <!--key dropdown-->
         <div class="container">
 
-          <div class="dropdown", type="button", ng-controller="DropDownKeyCtrl as vm">
+          <div class="dropdown", type="button">
             <button class="dropbtn" data-toggle="dropdown">
               keys <span class="caret"></span>
             </button>
 
             <ul class="dropdown-menu">
             <li ng-repeat="x in vm.keys">
-              <a ng-click="vm.setCurrent(x)">
+              <a ng-click="vm.setCurrentKey(x)">
                 {{x}}
               </a>
             </li>
           </ul><br>
           <br>
+          <p>Key chosen: {{ vm.currentKey }}</p>
+        </div>
+
+          <!--progression dropdown-->
+          <div class="dropdown", type="button">
+            <button class="dropbtn" data-toggle="dropdown">
+              progressions <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+              <li ng-repeat="x in vm.progressions">
+                <a ng-click="vm.setCurrentProgression(x.numprog)">
+                  {{ x.name }}
+                </a>
+              </li>
+            </ul><br>
+            <br>
+              <p>Progression chosen (for testing): {{ vm.currentProgression }}, {{ vm.currentKey }}</p>
+
+
+          </div>
 
 
             <!--Create button that collapses-->
             <p>
-              <button class="btn btn-primary" data-toggle="collapse" href="#displays" aria-expanded="false" aria-controls="displays">
-                Create
+              <button class="button", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
+                create
               </button>
             </p>
-            <div class="collapse" id="displays">
+            <div class="collapse", id="displays">
               <div class="card card-block">
-                <p>Progression chosen is *Not available yet*</p>
-                <p>Key chosen: {{ vm.current }}</p>
-              </div>
+                <p>Progression chosen is: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
+
             </div>
 
 
@@ -49,27 +69,9 @@
 
           </div> <!--closes dropdown-->
 
-        <!--progression dropdown-->
-        <div class="dropdown", type="button", ng-controller="DropdownProgressionsCtrl as vm">
-          <button class="dropbtn" data-toggle="dropdown">
-            progressions <span class="caret"></span>
-          </button>
-
-          <ul class="dropdown-menu">
-            <li ng-repeat="x in vm.progressions">
-              <a ng-click="vm.setCurrent(x.numprog)">
-                {{ x.name }}
-              </a>
-            </li>
-          </ul><br>
-          <br>
-            <p>Progression chosen (for testing): {{ vm.current }}</p>
-
-
-        </div>
         </div><!--closes container-->
 
-
+        <button class="button">save</button>
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
       </div><!--closes wrapper-->
@@ -77,7 +79,8 @@
       </div><!--closes content-->
 
       <div class="sidebar">
-        <p>Look, I'm a sidebar</p>
+        <p style="font-size:200%;">saved songs</p>
       </div>
+
 
 </section>
