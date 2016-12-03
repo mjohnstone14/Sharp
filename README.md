@@ -4,7 +4,12 @@ Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
 
 [Site link](https://agile-meadow-72160.herokuapp.com/)
 # Team Progress (Iteration 3)
-Kayla 
+Sierra
+* fixed the buttons and layout
+* changed colors and the sidebar
+* updated header to say 'SHARP'
+
+Kayla
 * Added a sidebar, collapsible create button, and buttons on the top bar for the 'How To' and 'About' pages.
 * Fixed small spacing and ordering errors
 * 'About' and 'How-To' pages have correlating html files now which will be polished later
@@ -12,7 +17,7 @@ Kayla
 
 Marwan
 
-* Edited main view html and used Bootstrap to create two drop down buttons which pull data from appropriate controllers. I did this for both the key and progression dropdowns. I also edited the controllers to save the user's click into a variable "current" for the vm object. This will be used in order to create songs in another controller later on. (11/17/16) 
+* Edited main view html and used Bootstrap to create two drop down buttons which pull data from appropriate controllers. I did this for both the key and progression dropdowns. I also edited the controllers to save the user's click into a variable "current" for the vm object. This will be used in order to create songs in another controller later on. (11/17/16)
 
 
 # Team Progress (Iteration 2)
