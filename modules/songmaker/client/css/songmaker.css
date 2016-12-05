@@ -18,6 +18,11 @@
   transform: translateY(4px);
 }
 
+.content{
+    float: left;
+    width: 100%;
+}
+
 .dropbtn {
   background-color: #227be8;
   border: 0;
@@ -64,22 +69,20 @@
     background-color: #227be8;
 }
 
+
+
+.sidebar{
+  background-color: lightgray;
+  border-radius: 5px;
+  float: right;
+  height: 400px;
+  margin-right: -50px;
+  padding: 6px;
+  width: 350px;
+}
+
+
 /* Next three deal with the layout of the sidebar*/
 .wrapper{
     margin-right: 300px;
-}
-
-.content{
-    float: left;
-    width: 100%;
-}
-
-.sidebar{
-  float: right;
-  width: 350px;
-  margin-right: -50px;
-  padding: 6px;
-  background-color: lightgray;
-  border-radius: 5px;
-  height: 400px;
 }

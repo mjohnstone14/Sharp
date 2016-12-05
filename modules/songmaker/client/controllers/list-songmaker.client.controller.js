@@ -30,9 +30,10 @@
     };
     vm.testCreate = function(v1, v2) {
       var prog = v1;
+      var proglen = v1.length;
       var k = vm.notes.indexOf(v2);
       vm.testProg = [];
-      for (var i = 0; i < prog.length; i++) {
+      for (var i = 0; i < proglen; i++) {
         var step = prog[i] - 1;
         vm.testProg[i] = vm.notes[(k + vm.steps[step]) % 12];
       }
