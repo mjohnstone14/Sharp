@@ -3,12 +3,14 @@
   <div class="container", ng-controller="DropdownProgressionsCtrl as vm">
     <h1>choose a key and a progression</h1>
 
-
     <div class="wrapper">
     <!--Main page data such as buttons for keys and chord progressions-->
 
     <div class="content"> <!--Central data-->
       <!--Dropped down button format-->
+      <div class="sidebar">
+        <p style="font-size:200%;">saved songs</p>
+      </div>
       <div ng-app=songmaker>
 
         <!--Drop downs-->
@@ -29,7 +31,7 @@
             </li>
           </ul><br>
           <br>
-          <p>Key chosen: {{ vm.currentKey }}</p>
+          <p style="font-size:150%">Key chosen: {{ vm.currentKey }}</p>
         </div>
 
           <!--progression dropdown-->
@@ -46,7 +48,7 @@
               </li>
             </ul><br>
             <br>
-              <p>Progression chosen (for testing): {{ vm.currentProgression }}, {{ vm.currentKey }}</p>
+              <p style="font-size:150%">Progression chosen (for testing): {{ vm.currentProgression }}, {{ vm.currentKey }}</p>
 
 
           </div>
@@ -67,25 +69,26 @@
               </div>
 
               <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
-                <p>Progression chosen is: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
-
+                <p style="font-size:150%">Progression chosen is: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
+                <button class="button">save</button>
               </div>
             </div>
            <!--closes dropdown-->
+
         </div>
+
 
         </div><!--closes container-->
 
-        <button class="button">save</button>
+
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
       </div><!--closes wrapper-->
       </div><!--Closes songmaker-->
+
       </div><!--closes content-->
-
-      <div class="sidebar">
-        <p style="font-size:200%;">saved songs</p>
-      </div>
-
 
 </section>
