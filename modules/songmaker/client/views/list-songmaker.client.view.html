@@ -18,23 +18,25 @@
         <!--key dropdown-->
         <div class="container">
 
+          <div class="btn-group">
           <div class="dropdown", type="button">
             <button class="dropbtn" data-toggle="dropdown">
               keys <span class="caret"></span>
             </button>
-
-            <ul class="dropdown-menu">
-            <li ng-repeat="x in vm.keys">
-              <a ng-click="vm.setCurrentKey(x)">
-                {{x}}
-              </a>
-            </li>
-          </ul><br>
-          <br>
-          <p style="font-size:150%">Key chosen: {{ vm.currentKey }}</p>
+              <ul class="dropdown-menu">
+              <li ng-repeat="x in vm.keys">
+                <a ng-click="vm.setCurrentKey(x)">
+                  {{x}}
+                </a>
+              </li>
+            </ul><br>
+            <br>
+            <p style="font-size:150%">Key chosen: {{ vm.currentKey }}</p>
+          </div>
         </div>
 
           <!--progression dropdown-->
+          <div class="btn-group">
           <div class="dropdown", type="button">
             <button class="dropbtn" data-toggle="dropdown">
               progressions <span class="caret"></span>
@@ -48,10 +50,11 @@
               </li>
             </ul><br>
             <br>
-              <p style="font-size:150%">Progression chosen (for testing): {{ vm.currentProgression }}, {{ vm.currentKey }}</p>
 
-
+            <p style="font-size:150%">Progression chosen (for testing): {{ vm.currentProgression }}, {{ vm.currentKey }}</p>
           </div>
+        </div>
+
 
 
             <!--Create button that collapses-->
