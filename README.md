@@ -1,6 +1,10 @@
 # Team Sharp
 Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
 
+# Team Progress (Iteration 4)
+
+Marwan
+* added a random button to the main html view and grouped buttons together, fixed formatting
 
 [Site link](https://agile-meadow-72160.herokuapp.com/)
 # Team Progress (Iteration 3)

@@ -11,75 +11,76 @@
       <div class="sidebar">
         <p style="font-size:200%;">saved songs</p>
       </div>
-      <div ng-app=songmaker>
+      <div ng-app="songmaker">
 
         <!--Drop downs-->
 
         <!--key dropdown-->
         <div class="container">
-
           <div class="btn-group">
-          <div class="dropdown", type="button">
-            <button class="dropbtn" data-toggle="dropdown">
-              keys <span class="caret"></span>
-            </button>
-              <ul class="dropdown-menu">
-              <li ng-repeat="x in vm.keys">
-                <a ng-click="vm.setCurrentKey(x)">
-                  {{x}}
-                </a>
-              </li>
-            </ul><br>
-            <br>
-            <p style="font-size:150%">Key chosen: {{ vm.currentKey }}</p>
-          </div>
-        </div>
-
-          <!--progression dropdown-->
-          <div class="btn-group">
-          <div class="dropdown", type="button">
-            <button class="dropbtn" data-toggle="dropdown">
-              progressions <span class="caret"></span>
-            </button>
-
-            <ul class="dropdown-menu">
-              <li ng-repeat="x in vm.progressions">
-                <a ng-click="vm.setCurrentProgression(x.numprog)">
-                  {{ x.name }}
-                </a>
-              </li>
-            </ul><br>
-            <br>
-
-            <p style="font-size:150%">Progression chosen (for testing): {{ vm.currentProgression }}, {{ vm.currentKey }}</p>
-          </div>
-        </div>
-
-
-
-            <!--Create button that collapses-->
-            <div ng-if="vm.currentProgression == 'undefined' || vm.currentKey == 'undefined'" >
-              <p> You still have to pick a progression and a key! </p>
-            </div>
-            <p>
-              <button class="button", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
-                create
+            <div class="dropdown", type="button">
+              <button class="dropbtn" data-toggle="dropdown">
+                keys <span class="caret"></span>
               </button>
-            </p>
+                <ul class="dropdown-menu">
+                <li ng-repeat="x in vm.keys">
+                  <a ng-click="vm.setCurrentKey(x)">
+                    {{x}}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          <!--progresison dropdown-->
+            <div class="dropdown", type="button">
+              <button class="dropbtn" data-toggle="dropdown">
+                progressions <span class="caret"></span>
+              </button>
+
+              <ul class="dropdown-menu">
+                <li ng-repeat="x in vm.progressions">
+                  <a ng-click="vm.setCurrentProgression(x.numprog)">
+                    {{ x.name }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+          <p style="font-size:150%">
+            <br> <!--linebreak-->
+            Key chosen: {{ vm.currentKey }}<br>
+            Progression chosen (for testing): {{ vm.currentProgression }}
+          </p>
+      </div>
+
+
+
+
+        <!--collapsing buttons-->
+        <br>
+        <div class="floated">
+          <button class="button", class="floated", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
+            create
+          </button>
+
+          <button class="button", class="floated", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
+            random
+          </button>
+
+          <p>
             <div class="collapse", id="displays">
               <div class="card card-block", ng-if="vm.currentProgression == undefined || vm.currentKey == undefined">
                 <p>You still have to pick a progression and a key!</p>
               </div>
 
               <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
-                <p style="font-size:150%">Progression chosen is: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
+                <p style="font-size:150%">The song you wanted: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
                 <button class="button">save</button>
               </div>
             </div>
-           <!--closes dropdown-->
-
+          </p>
         </div>
-
 
         </div><!--closes container-->
 
@@ -89,9 +90,9 @@
 
 
 
-      </div><!--closes wrapper-->
-      </div><!--Closes songmaker-->
-
+      </div><!--closes songmaker-->
+      </div><!--Closes content-->
+      </div><!-- closes wrapper-->
       </div><!--closes content-->
 
 </section>
