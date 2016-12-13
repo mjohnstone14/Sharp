@@ -81,8 +81,6 @@
   width: 300px;
 }
 
-
-/* Next three deal with the layout of the sidebar*/
 .wrapper{
     margin-right: 0px;
 }

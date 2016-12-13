@@ -1,13 +1,274 @@
-<section>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="logo">
-      <img src="/images/SharpLogo.png" alt="Logo" style=";width:400px;height:400px;">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href=" ">Sharp</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#how-to">How To</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo">
+                      <img src="/images/SharpLogo.png" alt="Logo" style=";width:400px;height:400px;">
+                    </div>
+
+                    <div class="text">
+                      <h1>SHARP</h1>
+                    </div>
+
+                    <div class="intro-text">
+                        <span class="name">Let's Make A Song</span>
+                        <hr class="star-light">
+
+                        <div class="container", ng-controller="DropdownProgressionsCtrl as vm">
+                          <h1>choose a key and a progression</h1>
+
+                          <!--Main page data such as buttons for keys and chord progressions-->
+                            <div class="content">
+
+                            <!--Dropped down button format-->
+                                <div ng-app="songmaker">
+
+                                  <!--key dropdown-->
+                                    <div class="container">
+                                        <div class="btn-group">
+                                            <div class="dropdown", type="button">
+                                                <button class="dropbtn" data-toggle="dropdown">
+                                                    keys <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li ng-repeat="x in vm.keys">
+                                                        <a ng-click="vm.setCurrentKey(x)">
+                                                            {{x}}
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div> <!--closes dropdown-->
+
+                                          <!--progresison dropdown-->
+                                            <div class="dropdown", type="button">
+                                                <button class="dropbtn" data-toggle="dropdown">
+                                                    progressions <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li ng-repeat="x in vm.progressions">
+                                                        <a ng-click="vm.setCurrentProgression(x.numprog)">
+                                                            {{ x.name }}
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p style="font-size:150%">
+                                            <br> <!--linebreak-->
+                                            Key chosen: {{ vm.currentKey }}<br>
+                                            Progression chosen (for testing): {{ vm.currentProgression }}
+                                            </p>
+                                        </div> <!--closes btn-group-->
+
+                                      <!--collapsing buttons-->
+                                        <br>
+                                        <div class="floated">
+                                            <button class="button", class="floated", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
+                                                create
+                                            </button>
+                                            <button class="button", class="floated", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
+                                                random
+                                            </button>
+                                            <p>
+                                                <div class="collapse", id="displays">
+                                                    <div class="card card-block", ng-if="vm.currentProgression == undefined || vm.currentKey == undefined">
+                                                        <p>You still have to pick a progression and a key!</p>
+                                                    </div>
+
+                                                    <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
+                                                        <p style="font-size:150%">The song you wanted: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
+                                                        <button class="button">save</button>
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </div><!--closes inner container-->
+
+
+                                <script src="lib/jquery/dist/jquery.min.js"></script>
+                                <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+                                </div><!--closes songmaker-->
+                            </div><!--Closes content-->
+                        </div><!--closes outer container-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- How To Use section -->
+    <section id="how-to">
+        <section class="container">
+            <div class="page-header">
+                <h1>How To Use Sharp</h1>
+            </div>
+
+            <form action="action_page.php">
+              <p>Sharp is really easy to use!<br> Step 1) Pick the key you would like your progression to be in. In our example, we have chosen 'D'
+                  <br> Step 2) Choose the progression you would like to modify. In our example, we have chosen 'Fifties'
+                  <br> Step 3) Hit the Create and now you have your new progression!</p>
+            </form>
+        </section>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>*I will put other stuff here* Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>3481 Melrose Place
+                            <br>Beverly Hills, CA 90210</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Freelancer</h3>
+                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Your Website 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
     </div>
 
-    <div class="text">
-      <h1>SHARP</h1>
-    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
 
 </body>
-</section>
+
+</html>

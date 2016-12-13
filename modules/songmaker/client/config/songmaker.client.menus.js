@@ -11,7 +11,6 @@
     menuService.addMenuItem('topbar', {
       title: 'Songmaker',
       state: 'songmaker',
-      type: 'dropdown',
       roles: ['*']
     });
 
