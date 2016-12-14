@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #18BC9C;
+  color: #c9cccb;
   outline: none;
 }
 h1,
@@ -29,7 +29,7 @@ h5,
 h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
 }
 hr.star-light,
 hr.star-primary {
@@ -54,7 +54,7 @@ hr.star-light {
   border-color: white;
 }
 hr.star-light:after {
-  background-color: #18BC9C;
+  background-color: #c9cccb;
   color: white;
 }
 hr.star-primary {
@@ -69,7 +69,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #18BC9C;
+  background: #c9cccb;
   color: white;
 }
 header .container {
@@ -129,7 +129,7 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #18BC9C;
+  color: #c9cccb;
   outline: none;
 }
 .navbar-custom .navbar-nav li a:focus,
@@ -138,13 +138,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #18BC9C;
+  background: #c9cccb;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #18BC9C;
+  background: #c9cccb;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -154,9 +154,9 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #18BC9C;
+  background-color: #c9cccb;
   color: white;
-  border-color: #18BC9C;
+  border-color: #c9cccb;
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -186,7 +186,7 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #18BC9C;
+  background: #c9cccb;
   color: white;
 }
 @media (max-width: 767px) {
@@ -289,7 +289,7 @@ section.success {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #18BC9C;
+  color: #c9cccb;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -323,7 +323,7 @@ footer .footer-below {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: #18BC9C;
+  color: #c9cccb;
   background: white;
   border: solid 2px white;
 }
@@ -371,8 +371,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: white;
-  background-color: #18BC9C;
-  border-color: #18BC9C;
+  background-color: #c9cccb;
+  border-color: #c9cccb;
   font-weight: 700;
 }
 .btn-success:hover,
@@ -404,11 +404,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #18BC9C;
-  border-color: #18BC9C;
+  background-color: #c9cccb;
+  border-color: #c9cccb;
 }
 .btn-success .badge {
-  color: #18BC9C;
+  color: #c9cccb;
   background-color: white;
 }
 .btn-social {
@@ -502,4 +502,85 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+
+/* Dropdown Button */
+.button {
+  background-color: #d6d6d6;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+}
+
+.button:hover {background-color: #e0e0e0}
+
+.button:active {
+  background-color: #8b8f93;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.content{
+    float: left;
+    width: 100%;
+}
+
+.dropbtn {
+  background-color: #2C3E50;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    display: inline-block;;
+    position: relative;;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  display: none;
+  min-width: 100px;
+  position: absolute;;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #2c3e50;
+}
+
+.logo {
+  align-content: center;
+  overflow: hidden;
+  position: absolute;
+  left: 22%;
+  top: -28%;
+  clip: rect(30px, 400px, 400px, 100px);
 }
