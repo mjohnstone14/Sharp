@@ -121,7 +121,7 @@
                                             <p style="font-size:150%">
                                             <br> <!--linebreak-->
                                             Key chosen: {{ vm.currentKey }}<br>
-                                            Progression chosen (for testing): {{ vm.currentProgression }}
+                                            Progression chosen: {{ vm.currentProgression }}
                                             </p>
                                         </div> <!--closes btn-group-->
 
@@ -142,7 +142,7 @@
 
                                                     <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
                                                         <p style="font-size:150%">The song you wanted: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
-                                                      
+
                                                     </div>
                                                 </div>
                                             </p>
@@ -170,9 +170,19 @@
             </div>
 
             <form action="action_page.php">
-              <p>Sharp is really easy to use!<br> Step 1) Pick the key you would like your progression to be in. In our example, we have chosen 'D'
-                  <br> Step 2) Choose the progression you would like to modify. In our example, we have chosen 'Fifties'
-                  <br> Step 3) Hit the Create and now you have your new progression!</p>
+              <p><h3>Sharp is really easy to use!</h3>
+                  <br>
+                  <br> <h4>Step 1) Pick the key you would like your progression to be in.</h4>
+                  <br><img src="/images/how-to-step-1.png" alt="Step 1" style=";width:705px;height:312px;">
+                  <br>
+                  <br> <h4>Step 2) Choose the progression you would like to modify.</h4>
+                  <br><img src="/images/how-to-step-2.png" alt="Step 1" style=";width:746px;height:294px;">
+                  <br>
+                  <br> <h4>Step 3) Hit the Create button, and now you have your new progression!</h4>
+                  <br><img src="/images/how-to-step-3.png" alt="Step 1" style=";width:737px;height:292px;">
+                  <br>
+                  <br> <h4>Step 4) If you aren't sure what you want to choose, hit the random button and get a surprise!</h4>
+              </p>
             </form>
         </section>
     </section>
