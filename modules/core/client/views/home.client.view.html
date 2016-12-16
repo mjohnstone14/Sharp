@@ -11,11 +11,14 @@
 
     <title>Freelancer - Start Bootstrap Theme</title>
 
+
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/custom.css" rel="stylesheet">
     <!-- Theme CSS -->
     <link href="css/freelancer.min.css" rel="stylesheet">
+    <link href="css/freelancer.css" rel="stylesheet">
+
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,7 +37,7 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav id="mainNav" class="navbar navbar-light navbar-fixed-top" style="background-color:#e9f47f;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -51,10 +54,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#how-to">How To</a>
+                        <a href="#how-to" style="color:#2C3E50">How To</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="#about" style="color:#2C3E50">About</a>
                     </li>
                 </ul>
             </div>
@@ -69,11 +72,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="logo">
-                      <img src="/images/newlogo.png" alt="Logo" style=";width:600px;height:500px;">
+                      <img src="/images/newlogo.png" alt="Logo" style="width:600px;height:500px;">
                     </div>
 
                     <div class="text">
-                      <h1>SHARP</h1>
+                      <h1 style="font-size:20px;">SHARP</h1>
                     </div>
 
                     <div class="intro-text">
@@ -118,10 +121,13 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <p style="font-size:150%">
+                                            <p style="font-size:200%">
                                             <br> <!--linebreak-->
-                                            Key chosen: {{ vm.currentKey }}<br>
-                                            Progression chosen: {{ vm.currentProgression }}
+
+                                            key chosen: {{ vm.currentKey }}<br>
+                                            progression chosen : {{ vm.currentProgression }}
+
+
                                             </p>
                                         </div> <!--closes btn-group-->
 
@@ -141,30 +147,37 @@
                                                     </div>
 
                                                     <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
-                                                        <p style="font-size:150%">The song you wanted: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
+
+                                                        <p style="font-size:300%">your song : {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
+
+
 
                                                     </div>
+
                                                 </div>
                                             </p>
                                         </div>
                                       </span><!--closes inner container-->
-                      <script src="lib/jquery/dist/jquery.min.js"></script>
                                 <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
                                 </div><!--closes songmaker-->
                             </div><!--Closes content-->
+
                         </div><!--closes outer container-->
                     </div>
+                    <div class="music">
+
                 </div>
             </div>
         </div>
+
     </header>
 
     <!-- How To Use section -->
     <section id="how-to">
         <section class="container">
             <div class="page-header">
-                <h1>How To Use Sharp</h1>
+                <h1 style="color:#2C3E50">How To Use Sharp</h1>
             </div>
 
             <form action="action_page.php">
@@ -212,12 +225,12 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-4">
+                    <div class="footer-col col-md-6">
                         <h3>Location</h3>
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
+                        <p>University of Puget Sound
+                            <br>Tacoma, Washington 98406</p>
                     </div>
-                    <div class="footer-col col-md-4">
+                    <div class="footer-col col-md-6">
                         <h3>Around the Web</h3>
                             <ul class="list-inline">
                                 <li>
@@ -236,10 +249,6 @@
                                     <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
                                 </li>
                             </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
                     </div>
                 </div>
             </div>
@@ -279,6 +288,7 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+
 
 </body>
 
