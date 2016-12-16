@@ -134,20 +134,22 @@
                                         <!--collapsing buttons-->
                                           <br>
                                           <div class="floated">
+                                            <div id="create">
                                               <button class="button", class="floated", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
                                                   create
                                               </button>
                                               <button class="button", class="floated", data-toggle="collapse", href="#random", aria-expanded="false", aria-controls="displays">
                                                   random
                                               </button>
-                                              <p>
-                                                  <div class="collapse", id="displays">
-                                                      <div class="card card-block", ng-if="vm.currentKey == undefined">
-                                                          <p>You still have to pick a key!</p>
-                                                      </div>
 
-                                                      <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
-                                                          <p style="font-size:250%">The song you wanted: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
+                                              <p>
+                                                <div class="collapse", id="displays">
+                                                    <div class="card card-block", ng-if="vm.currentKey == undefined">
+                                                        <p>You still have to pick a key!</p>
+                                                    </div>
+
+                                                    <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
+                                                        <p style="font-size:250%">The song you wanted: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
 
                                                       </div>
                                                   </div>
@@ -164,6 +166,7 @@
 
                                               </p>
                                           </div><!---closes floated->
+
                                       </div><!--closes inner container-->
 
 
@@ -200,10 +203,14 @@
                   <br><img src="/images/how-to-step-2.png" alt="Step 1" style=";width:746px;height:294px;">
                   <br>
                   <br> <h4>Step 3) Hit the Create button, and now you have your new progression!</h4>
+<<<<<<< HEAD
                   <br><img src="/images/how-to-step-3.png" alt="Step 1" style=";width:737px;height:306px;">
                   <br>
                   <br> <h4>Step 4) If you aren't sure what you want to choose, pick a random key and hit the random button to get a surprise!</h4>
                   <br><img src="/images/how-to-step-4.png" alt="Step 1" style=";width:737px;height:306px;">
+=======
+                  <br><img src="/images/tryagain3.png" alt="Step 1" style=";width:737px;height:292px;">
+>>>>>>> aa5275d59ba86184f4bf90b83408a523c46f4ee6
                   <br>
               </p>
             </form>
