@@ -11,6 +11,9 @@
   function DropdownProgressionsCtrl() {
     var vm = this;
     vm.title = 'Progressions';
+    vm.getRandomIndex = function(min, max){
+      return Math.floor(Math.random() * (max - min) + min)
+    };
     vm.testProg = ['Select progression and key'];
     vm.keys = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
     vm.notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
