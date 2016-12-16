@@ -79,3 +79,13 @@
   top: -28%;
   clip: rect(30px, 400px, 400px, 100px);
 }
+
+
+.container {
+width: auto;
+max-width: 1600px;
+padding: 0 0px;
+}
+.container .credit {
+margin: 20px 0;
+}

@@ -80,7 +80,7 @@
                         <span class="name">Let's Make A Song</span>
                         <hr class="star-light">
 
-                        <div class="container", ng-controller="DropdownProgressionsCtrl as vm">
+                        <span class="container", ng-controller="DropdownProgressionsCtrl as vm">
                           <h1>choose a key and a progression</h1>
 
                           <!--Main page data such as buttons for keys and chord progressions-->
@@ -147,44 +147,7 @@
                                                 </div>
                                             </p>
                                         </div>
-                                    </div><!--closes inner container-->
-
-
-                                    <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create</button>
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-<div class="modal-dialog">
-
-<!-- Modal content-->
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <h4 class="modal-title">Modal Header</h4>
-    </div>
-    <div class="modal-body">
-      <div class="card card-block", ng-if="vm.currentProgression == undefined || vm.currentKey == undefined">
-          <p>You still have to pick a progression and a key!</p>
-      </div>
-
-      <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
-          <p style="font-size:150%">The song you wanted: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
-
-      </div>
-    </div>
-    <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  </div>
-</div>
-
-</div>
-</div>
-
-
-
-
-
+                                      </span><!--closes inner container-->
                       <script src="lib/jquery/dist/jquery.min.js"></script>
                                 <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -233,7 +196,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>*I will put other stuff here* Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                    <p>Sharp is an easy-to-use app that is perfect for beginner guitarists. All you have to do is pick a key and a progression while we do the rest of the work
+                    for you. Whether you are looking for a new sound or have hit a creative spark, Sharp will be able to assist you.</p>
                 </div>
                 <div class="col-lg-4">
                     <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
@@ -243,7 +207,8 @@
     </section>
 
   <!-- Footer -->
-    <footer class="text-center">
+<!--  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation"> -->
+    <footer class="text-center", >
         <div class="footer-above">
             <div class="container">
                 <div class="row">
@@ -289,6 +254,7 @@
             </div>
         </div>
     </footer>
+  <!--</nav> -->
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
