@@ -125,39 +125,35 @@
                                             <br> <!--linebreak-->
 
                                             key chosen: {{ vm.currentKey }}<br>
-                                            progression chosen : {{ vm.currentProgression }}
+                                            progression chosen : {{ vm.currentProgression.join(', ') }}
 
 
                                             </p>
                                         </div> <!--closes btn-group-->
 
-                                      <!--collapsing buttons-->
-                                        <br>
-                                        <div class="floated">
-                                            <button class="button", class="floated", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
-                                                create
-                                            </button>
-                                            <button class="button", class="floated", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
-                                                random
-                                            </button>
-                                            <p>
-                                                <div class="collapse", id="displays">
-                                                    <div class="card card-block", ng-if="vm.currentProgression == undefined || vm.currentKey == undefined">
-                                                        <p>You still have to pick a progression and a key!</p>
-                                                    </div>
+                                        <!--collapsing buttons-->
+                                          <br>
+                                          <div class="floated">
+                                              <button class="button", class="floated", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
+                                                  create
+                                              </button>
+                                              <button class="button", class="floated", data-toggle="collapse", href="#displays", aria-expanded="false", aria-controls="displays">
+                                                  random
+                                              </button>
+                                              <p>
+                                                  <div class="collapse", id="displays">
+                                                      <div class="card card-block", ng-if="vm.currentProgression == undefined || vm.currentKey == undefined">
+                                                          <p>You still have to pick a progression and a key!</p>
+                                                      </div>
 
-                                                    <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
+                                                      <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
+                                                          <p style="font-size:150%">The song you wanted: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
 
-                                                        <p style="font-size:300%">your song : {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
-
-
-
-                                                    </div>
-
-                                                </div>
-                                            </p>
-                                        </div>
-                                    </span><!--closes inner container-->
+                                                      </div>
+                                                  </div>
+                                              </p>
+                                          </div>
+                                      </div><!--closes inner container-->
 
 
                                 <script src="lib/jquery/dist/jquery.min.js"></script>

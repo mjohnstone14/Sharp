@@ -37,7 +37,7 @@
         var step = prog[i] - 1;
         vm.testProg[i] = vm.notes[(k + vm.steps[step]) % 12];
       }
-      return vm.testProg;
+      return vm.testProg.join(', ');
     };
 
   }
