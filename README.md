@@ -16,6 +16,12 @@ Kayla
 Marwan
 * added a random button to the main html view and grouped buttons together, fixed formatting
 
+Sierra
+* worked with the format of the new bootstrap theme
+* customized the bootstrap theme with new colors and added the logo
+* changed the font sizes and colors
+* edited the buttons
+
 [Site link](https://agile-meadow-72160.herokuapp.com/)
 # Team Progress (Iteration 3)
 Elias
