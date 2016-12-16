@@ -1,3 +1,5 @@
+[Site link](https://agile-meadow-72160.herokuapp.com/)
+
 # Team Sharp
 Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
 
@@ -25,7 +27,9 @@ Sierra
 * changed the font sizes and colors
 * edited the buttons
 
-[Site link](https://agile-meadow-72160.herokuapp.com/)
+![](/README images/Screen Shot 2016-12-16 at 11.05.00 AM.png)
+![](/README images/Screen Shot 2016-12-16 at 11.05.24 AM.png)
+
 # Team Progress (Iteration 3)
 Elias
 * Consolidated the dropdown controllers into a single one in order to
