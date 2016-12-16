@@ -12,6 +12,9 @@ Kayla
 * There is an error involving scrollspy that I was informed was okay to ignore.
 * Turned our app into a one-paged application, so all of our views have been moved to home.client.view.html
 * Edited the How-to page to include picture references to how the user is supposed to use our app.
+* Deleted some files that were just causing errors
+* Worked with Sierra to clean up some layout space issues and implement how-to images
+* Made the random work in the view, I got rid of of the issue where both the create and random button were doing the same things and was able to make the random button act exteriorly like the create button
 
 Marwan
 * added a random button to the main html view and grouped buttons together, fixed formatting
