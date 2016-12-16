@@ -142,14 +142,20 @@
                                               </button>
                                               <p>
                                                   <div class="collapse", id="displays">
-                                                      <div class="card card-block", ng-if="vm.currentProgression == undefined || vm.currentKey == undefined">
-                                                          <p>You still have to pick a progression and a key!</p>
+                                                      <div class="card card-block", ng-if="vm.currentKey == undefined">
+                                                          <p>You still have to pick a key!</p>
                                                       </div>
 
                                                       <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
                                                           <p style="font-size:250%">The song you wanted: {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
 
                                                       </div>
+
+                                                      <div class="card card-block", ng-if="vm.currentProgression == undefined && vm.currentKey != undefined">
+                                                          <p style="font-size:150%">The song you wanted: {{ vm.testCreate(vm.progressions[vm.getRandomIndex(0,3)].numprog, vm.currentKey) }}</p>
+
+                                                      </div>
+
                                                   </div>
                                               </p>
                                           </div>
@@ -212,7 +218,7 @@
                     for you. Whether you are looking for a new sound or have hit a creative spark, Sharp will be able to assist you.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                    <p>This app represents our passion for music and creativity. Programming, like music, is a form of self expression and is a reflection of who we are. This project is the culmination of our work as a team, and we hope that you enjoy it as much as we did making it!</p>
                 </div>
             </div>
         </div>
