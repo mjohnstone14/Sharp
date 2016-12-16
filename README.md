@@ -2,11 +2,15 @@
 Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
 
 # Team Progress (Iteration 4)
-Kayla 
+Elias
+* Cleaned up display of current progression and chosen song.
+* Added a 'random' functionality. When the user chooses a key but not
+a progression, a song will be generated using a random progression from the dropdown.
+Kayla
 * Implemented the Freelancer theme, but there still some issues with how it is supposed to work.
 * There is an error involving scrollspy that I was informed was okay to ignore.
 * Turned our app into a one-paged application, so all of our views have been moved to home.client.view.html
-* Edited the How-to page to include picture references to how the user is supposed to use our app. 
+* Edited the How-to page to include picture references to how the user is supposed to use our app.
 
 Marwan
 * added a random button to the main html view and grouped buttons together, fixed formatting
