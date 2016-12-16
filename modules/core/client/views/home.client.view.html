@@ -123,8 +123,11 @@
                                             </div>
                                             <p style="font-size:200%">
                                             <br> <!--linebreak-->
+
                                             key chosen: {{ vm.currentKey }}<br>
                                             progression chosen : {{ vm.currentProgression }}
+
+
                                             </p>
                                         </div> <!--closes btn-group-->
 
@@ -144,7 +147,10 @@
                                                     </div>
 
                                                     <div class="card card-block", ng-if="vm.currentProgression != undefined && vm.currentKey != undefined">
+
                                                         <p style="font-size:300%">your song : {{ vm.testCreate(vm.currentProgression, vm.currentKey) }}</p>
+
+
 
                                                     </div>
 
