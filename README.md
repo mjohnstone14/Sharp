@@ -6,6 +6,7 @@ Elias
 * Cleaned up display of current progression and chosen song.
 * Added a 'random' functionality. When the user chooses a key but not
 a progression, a song will be generated using a random progression from the dropdown.
+
 Kayla
 * Implemented the Freelancer theme, but there still some issues with how it is supposed to work.
 * There is an error involving scrollspy that I was informed was okay to ignore.
