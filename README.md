@@ -1,4 +1,5 @@
 [Site link](https://agile-meadow-72160.herokuapp.com/)
+(/README images/TeamSharp.pdf.zip)
 
 # Team Sharp
 Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
