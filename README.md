@@ -3,7 +3,9 @@
 # Team Sharp
 Elias McSeveney, Kayla Ramos, Marwan Johnstone, Sierra Scott
 
-# Team Progress (Iteration 4)
+# Team Progress (Iteration 4) 
+(our slides are in .slides.zip)
+
 Elias
 * Cleaned up display of current progression and chosen song.
 * Added a 'random' functionality. When the user chooses a key but not
